@@ -1,11 +1,11 @@
 #pragma once
-#ifndef AHP_H
-#define AHP_H
+#ifndef Human_H
+#define Human_H
 #include"RPSPlayer.h"
 #include"RandomPlayer.h"
 
 
-class AHP : public RPSPlayer {
+class Human : public RPSPlayer {
 public:
 	Move nextMove() {
 		return da.nextMove();
@@ -16,30 +16,29 @@ public:
 		}
 		else if (myResult == 0) {
 			if (myMove == 0) {
-				return Paper;
+				return Rock;
 			}
 			else if (myMove == 1) {
-				return Scissors;
+				return Paper;
 			}
 			else {
-				return Rock;
+				return Scissors;
 			}
 		}
 		else {
 			if (myMove == 0) {
-				return Scissors;
+				return Paper;
 			}
 			else if (myMove == 1) {
-				return Rock;
+				return Scissors;
 			}
 			else {
-				return Paper;
+				return Rock;
 			}
 		}
 	}
 private:
 	RandomPlayer da;
 };
-#include"RPSPlayer.h"
 
 #endif // !AHP*/

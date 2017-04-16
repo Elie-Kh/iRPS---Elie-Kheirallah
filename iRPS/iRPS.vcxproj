@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="AHP.h" />
     <ClInclude Include="PlayerManager.h" />
+    <ClInclude Include="ProbabilityPlayer.h" />
     <ClInclude Include="RandomPlayer.h" />
     <ClInclude Include="RNGeezus.h" />
     <ClInclude Include="RPSPlayer.h" />

@@ -1,10 +1,10 @@
+#pragma once
 #ifndef RandomPlayer_H
 #define RandomPlayer_H
 
 #include"RNGeezus.h"
 #include"RPSPlayer.h"
-#include<sstream>
-#include<ios>
+
 using namespace std;
 class RandomPlayer: public RPSPlayer {
 private:
