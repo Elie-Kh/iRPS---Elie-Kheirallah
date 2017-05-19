@@ -7,6 +7,9 @@
 
 class AHP : public RPSPlayer {
 public:
+	/*AHP will counter the human strategy. It will always play the thing that beats the thing that won.
+	Unless it draws. Then it plays random. Under normal conditions, 
+	it will win and keep on winning because it is 1 step ahead. */
 	Move nextMove() {
 		return da.nextMove();
 	}

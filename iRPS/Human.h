@@ -4,8 +4,12 @@
 #include"RPSPlayer.h"
 #include"RandomPlayer.h"
 
+/* Human player. 
+The human player is static.
+It plays the winning move always. If the human wins, it plays the same thing.
+If the human loses, it will play what just beat it.*/
 
-class Human : public RPSPlayer {
+class Human : public RPSPlayer {   
 public:
 	Move nextMove() {
 		return da.nextMove();

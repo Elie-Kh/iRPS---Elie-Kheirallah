@@ -3,7 +3,9 @@
 #define RPSPlayer_H
 #include <fstream>
 #include<iostream>
-enum Move { Rock, Paper, Scissors, StartMove };
+
+/*RPS player: Abstract class. Contains nextMove which every other player requires.*/
+enum Move { Rock, Paper, Scissors, StartMove }; //StartMove is there in order to start randomly
 enum GameResult	{ Win, Draw, Lose};
 class RPSPlayer {
 public:

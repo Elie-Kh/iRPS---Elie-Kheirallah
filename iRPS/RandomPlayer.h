@@ -6,12 +6,12 @@
 #include"RPSPlayer.h"
 
 using namespace std;
-class RandomPlayer: public RPSPlayer {
+class RandomPlayer: public RPSPlayer {								//generates random number
 private:
-	RNG randomNum;
+	RNG randomNum;													//calls random number generator
 public:
 	Move nextMove() {
-		return static_cast <Move> (randomNum.getRandom(0, 2)) ;
+		return static_cast <Move> (randomNum.getRandom(0, 2)) ;		//casts integer to move for random.
 	}
 	
 	

@@ -4,7 +4,7 @@
 #include <iostream>
 #include<random>
 
-class RNG
+class RNG																//Random number generator code
 {
 public:
 	RNG::RNG() : gen(std::random_device()()) {} 

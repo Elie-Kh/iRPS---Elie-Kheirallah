@@ -6,10 +6,15 @@
 #include"RandomPlayer.h"
 class ProbPlayer : public RPSPlayer {
 public:
-	Move nextMove() {
+	Move nextMove() {			//initializing nextMove to overload and be able to create objects. (not abstract anymore)
 		return rand.nextMove();
 	}
-	
+	/*The following 200 lines are to update probability. 
+	Example for 1st if: WRR == Win Rock Rock
+	If user won playing Rock, and then plays Rock again,
+	His probability for playing Rock after winning with
+	a rock increases, while playing paper and scissors
+	After winning with rock decreases.*/
 	void Prob(GameResult hisPrevStatus, Move Previous, Move presentMove) {
 		if (Previous == 0) {
 			if (hisPrevStatus == 0) {
@@ -202,10 +207,17 @@ public:
 			}
 		}
 
-		
+		/*nextMove will take previous move and result.
+		Base on that, the next move will be picked.
+		Example: nextMove(Win,Rock)
+		Means last round, the opponent won with Rock.
+		If WRR > WRP and WRS, then his chance of playing
+		Rock next is higher, and the probability player will
+		Play paper to counter his move.
+		This applies to the next 160 lines.
+		Starts with W = Win, D = Draw, L = Lose.*/
 	}
 	Move nextMove(GameResult hisPrev,Move Previous) {
-		//Prob(hisPrevStatus, Previous, presentMove);
 		if (hisPrev == 0) {
 			if (Previous == 0) {
 				if (WRR > WRP && WRR > WRS) {
@@ -218,7 +230,7 @@ public:
 					return Rock;
 				}
 				else {
-					cout << "rand\t";
+			
 					return rand.nextMove();
 				}
 			}
@@ -233,7 +245,7 @@ public:
 					return Rock;
 				}
 				else {
-					cout << "rand\t";
+					
 					return rand.nextMove();
 				}
 			}
@@ -248,12 +260,12 @@ public:
 					return Rock;
 				}
 				else {
-					cout << "rand\t";
+				
 					return rand.nextMove();
 				}
 			}
 			else {
-				cout << "rand\t";
+				
 				return rand.nextMove();
 			}
 		}
@@ -269,7 +281,7 @@ public:
 					return Rock;
 				}
 				else {
-					cout << "rand\t";
+					
 					return rand.nextMove();
 				}
 			}
@@ -284,7 +296,7 @@ public:
 					return Rock;
 				}
 				else {
-					cout << "rand\t";
+				
 					return rand.nextMove();
 				}
 			}
@@ -299,12 +311,12 @@ public:
 					return Rock;
 				}
 				else {
-					cout << "rand\t";
+				
 					return rand.nextMove();
 				}
 			}
 			else {
-				cout << "rand\t";
+			
 				return rand.nextMove();
 			}
 		}
@@ -320,7 +332,7 @@ public:
 					return Rock;
 				}
 				else {
-					cout << "rand\t";
+			
 					return rand.nextMove();
 				}
 			}
@@ -335,7 +347,7 @@ public:
 					return Rock;
 				}
 				else {
-					cout << "rand\t";
+				
 					return rand.nextMove();
 				}
 			}
@@ -350,17 +362,17 @@ public:
 					return Rock;
 				}
 				else {
-					cout << "rand\t";
+		
 					return rand.nextMove();
 				}
 			}
 			else {
-				cout << "rand\t";
+		
 				return rand.nextMove();
 			}
 		}
 		else {
-			cout << "rand\t";
+	
 			return rand.nextMove();
 		}
 
